@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo's</title>
+    <link rel="stylesheet" href="style.css"> <!--連接style.css-->
+</head>
+<body>
+    <header><!--LOGO等頁首相關-->
+        <button class="menu">&#9776;</button>
+        <h1 style="color: black;">Promo's</h1>
+        <nav><!--網站導覽列或主選單-->
+        <ul> <!--ul為原點，ol為數字順序-->       
+            <li><a href="#">最新消息</a></li> <!--href為網址連結-->
+            <li><a href="#">關於我們</a></li>
+            <li><a href="#">門市據點</a></li>
+            <li><a href="#">會員專區</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main><!--網頁主要內容-->
+    <section class="news"><!--對main中的內容作分類-->
+    <h2>新鮮出爐 香軟鬆綿</h2><!--在html標籤裡輸入style也可以改變該行屬性(不能通用到其他h2)-->
+    <p><strong>每一口 都是酵母的淬鍊</strong></p><!--<strong>為粗體，<em>為斜體-->
+    <p><strong><a href="http://www.example.com">了解更多</a></strong></p>
+    </section>
+
+    <section class="slogan">
+    <blockquote cite="http://www.example.com">" 嚴選天然食材，精湛匠心烘焙 <br> 讓幸福在每口麵包中的香氣蔓延 "</blockquote><!--blockquote為引用，<br>是換行，可加入cite標明來源網址也可以不標明"-->
+    </section>
+
+    <section class="shop">
+    <img src="images/歡慶百年.webp" alt=素材1><!--src用以描述圖片來源或網址，alt則是圖片敘述，以便載入失敗仍能描述或是視障者能透過閱讀器了解圖片-->
+    
+    <div class="info"><!--div分割區塊-->
+    <h2 >歡慶Promo's成立百年!</h2>
+    <p>即日起來店消費加入LINE好友 <br>即可享有精緻小點心</p>
+    </div>  
+    </section>
+
+    <section class="product">
+        <div>
+            <img src="images/菠蘿麵包.jpg" alt="菠蘿麵包">
+            <h3>菠蘿麵包</h3>
+            <p>焦香外皮，內質鬆軟<br>瀰漫口中的濃郁奶香</p>
+        </div>
+        <div>
+            <img src="images/法國麵包.jpg" alt="法國麵包">
+            <h3>法國麵包</h3>
+            <p>焦香外皮，內質鬆軟<br>紮食與綿密的口感結合</p>
+        </div>
+        <div>
+            <img src="images/白土司.jpg" alt="白吐司">
+            <h3>白吐司</h3>
+            <p>經典不敗<br>簡單的香氣牽引您的味蕾</p>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <p>
+            歡迎訂閱Promo's電子報，可不定時收到限定優惠喔!
+        </p>
+        <form>
+            <input type="email" placeholder="請輸入您的 Email" required>
+            <button type="submit">送出</button>
+        </form>
+        
+    </section>
+
+    </main>
+    <footer><!--頁尾(通常為版權聲明及附加資訊)-->
+        <p>Copyright © 2025 Promo's ALL RIGHT Reserved. </p>
+    </footer>
+</body>
+</html>

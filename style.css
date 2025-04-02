@@ -1,0 +1,221 @@
+        *{
+            padding:0 ;
+            margin:0 ;
+        }/*重設語法(padding:內邊距 border:邊框 maergin:外邊距 */
+        /*border: 邊框粗細 顏色 樣式
+        padding(適用margin) :上/右/下/左 or 上/左右/下 or 上下/左右(只有1個數值就是4邊相同)*/
+        header{
+            background-color: rgba(100, 46, 46,0.8);
+            height: 80px;
+            width: 100%;/*100%視窗寬(與視窗同寬)*/
+            position: fixed;/*relative相對(從版面計算)，absolute絕對(從原位置計算)，fixed保留在網頁上方*/
+        }
+        h1{
+            color: white;
+        }
+        header ul{
+            position: absolute;
+            right: 5vw;
+            top: 0;
+            line-height: 80px;
+        }
+        h1{
+            position: absolute;
+            left: 120px;
+            top: 0;
+            line-height: 80px;
+            background-image:url(images/logo.png) ;
+            background-position: center;
+            width: 200px;
+            text-indent: -9999px;/*文字縮排將文字移開*/
+        }
+        header li {
+            display:inline;/*將li變為一行直線*/
+            margin-right: 4vw;/*4vw代表視窗寬度的4%，當視窗大小不同將自動調整*/
+        }
+        header a{
+            color: white;
+            text-decoration: none;/*底線樣式*/
+        }
+        header a:hover{
+            text-decoration:underline;
+        }/*懸停(屬標放在上面)語法*/
+        .news {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            height: 85vh;
+            background-image:url("images/背景圖.jpg!w700wp");
+            background-repeat: no-repeat;
+            background-size: cover;/*cover覆蓋整個區塊，auto不變，contain符合寬或高*/
+            background-position:center;
+            display: flex;/*展示方式直橫*/
+            flex-direction: column;/*欄 直向*/
+            justify-content: center;/*水平置中，space-between父元素兩側，space-evenly均分子元素以外空間*/
+            align-items: center;/*垂直置中*/
+        }
+        .news h2{
+            font-size: 60px;
+        }
+        .news p {
+            color: rgb(255, 255, 255);
+            opacity: 1;
+            font-size: 20px;
+            margin: 25px 0;
+        }
+        .news a{
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            border: 3px solid #ffffffd2;
+            padding: 10px 20px;
+            border-radius: 8px;/*圓角效果*/
+        }
+        .slogan{
+            background-color: #485652;
+            color: white;
+            height: 200px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            line-height: 1.8em;
+        }
+        footer{
+            background-color: #49474770;
+            color: rgb(0, 0, 0);
+            height: 50px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size :12px;
+        }
+        .shop{
+            display: flex;
+        }
+        .shop img{
+            width: 70%;
+        }
+        .info{
+            font-size: 18px;
+            font-weight :bolder;
+            width: 30%;
+            font-family: Microsoft JhengHei;
+            background-color: rgb(244, 219, 201);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .info h2{
+            font-size: 40px;
+            margin-bottom: 30px;
+        } 
+        .info p {
+            text-align: center;
+            line-height: 2em;
+        }
+        .product{
+            padding: 100px;
+            display: flex;
+            background-color: #ede9db;
+            justify-content: space-between;
+            align-items: center;
+            padding:100px 180px 80px;
+        }
+        .product div{
+            width: 300px;
+            text-align: center;/*文字對其div元素中央*/
+        }
+        .product img{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product h3{
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        .product p{
+            font-size: 14px;
+            line-height: 1.6em;
+        }
+        .newsletter{
+            background-color: #b09e80b6;
+            color: white;
+            padding: 60px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .newsletter p{
+            margin-bottom: 20px;
+        }
+        .newsletter input, .newsletter button{
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+            border:2px solid #5653538a;
+            padding:10px;
+            border-radius: 5px;
+        }
+        .newsletter input{
+            width: 160px;
+            margin-right:15px;
+         }
+        .newsletter button{
+            width: 70px;
+            cursor: pointer;/*鼠標移動上方會呈現手指*/
+         }
+         input::placeholder{
+            color: #ffffff;
+         }
+         input:focus{
+            outline: none;/*小外框顯示取消*/
+            border-color: #f3f3f3;
+         }
+         .menu{
+            display: none;
+         }
+
+        /* 響應式設計語法 */
+        @media screen and (max-width: 768px)/*響應式生效於螢幕768px時*/{
+            header ul{
+                display: none;            
+            }
+            header h1{
+                left:50%;
+                transform: translateX(-50%);/*x軸移動語法*/
+            }
+        .news h2{
+            font-size:40px;
+        }
+        .menu{
+            display: block;
+            background-color: transparent;
+            color: white;
+            font-size: 35px;
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .shop{
+            flex-direction: column;
+        }
+        .shop img{
+            width: 100%;
+        }
+        .info{
+            width:100%;
+            padding: 40px 0;
+        }
+        .info h2{
+            font-size: 30px;
+        }
+        .product{
+            flex-direction: column;
+            padding: 60px 0;
+        }
+        .produt div{
+            margin-bottom: 30px;
+        }
+    }
+
